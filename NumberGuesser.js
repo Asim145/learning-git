@@ -33,6 +33,7 @@ let userGuess = document.querySelector("#inputGuess");
 if (userGuess) {
   userGuess.addEventListener("click", () => {
     document.querySelector("#userMessage").innerHTML = "";
+    userGuess.value = "";
   });
 }
 // if (userGuess == document.activeElement) {
