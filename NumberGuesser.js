@@ -22,11 +22,22 @@ if (submitGuess) {
         "Yayy!!! You Guessed it....";
       document.querySelector("#userTries").innerHTML = usertry;
       document.querySelector("#userScore").innerHTML = userscore - usertry;
-    } else
+    } else {
       document.querySelector("#userMessage").innerHTML =
         "Please enter a valid number";
+    }
+    document.querySelector("#userTries").innerHTML = usertry;
   });
 }
+let userGuess = document.querySelector("#inputGuess");
+if (userGuess) {
+  userGuess.addEventListener("click", () => {
+    document.querySelector("#userMessage").innerHTML = "";
+  });
+}
+// if (userGuess == document.activeElement) {
+//   document.querySelector("#userMessage").innerHTML = "";
+// }
 // Number Guess Game Main Logic
 // let num = Math.floor(Math.random() * 100 + 1);
 // let usertry = 0;
